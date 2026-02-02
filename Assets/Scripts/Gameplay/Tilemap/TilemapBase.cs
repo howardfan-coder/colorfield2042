@@ -6,11 +6,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
-public class Platform : MonoBehaviour
+public class TilemapBase : MonoBehaviour
 {
-    private Tilemap tilemap;
-    private TilemapCollider2D tilemapCollider2D;
-    private EventCenter eventCenter;
+    public EventCenter eventCenter;
+
+    public Tilemap tilemap;
+    public TilemapCollider2D tilemapCollider2D;
     public ColorType colorType;
     private void Awake()
     {
@@ -21,7 +22,7 @@ public class Platform : MonoBehaviour
     {
         tilemap = gameObject.GetComponent<Tilemap>();
         tilemapCollider2D = gameObject.GetComponent<TilemapCollider2D>();
-        eventCenter.AddEventListener(EventType.ColorChange, _onColorChanged);
+        eventCenter.AddEventListener(EventType.ColorChange, OnColorChanged);
     }
 
     // Update is called once per frame
@@ -30,10 +31,15 @@ public class Platform : MonoBehaviour
         
     }
 
-    private void _onColorChanged(object info)
+    void OnColorChanged(object info)
     {
-        ColorType colorType = (ColorType)Enum.ToObject(typeof(ColorType), info);
-        if (this.colorType == colorType)
+        ColorType type = (ColorType)Enum.ToObject(typeof(ColorType), info);
+        ChangeTileMapState(type);
+    }
+
+    public virtual void ChangeTileMapState(ColorType type) 
+    {
+        if (colorType == type && colorType != ColorType.WHITE)
         {
             tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 100);
             tilemapCollider2D.enabled = false;

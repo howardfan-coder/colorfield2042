@@ -18,9 +18,9 @@ public class EventCenter
         }
     }
 
-    private Dictionary<EventType, UnityAction<Object>> eventDic = new Dictionary<EventType, UnityAction<Object>>();
+    private Dictionary<EventType, UnityAction<object>> eventDic = new Dictionary<EventType, UnityAction<object>>();
 
-    public void AddEventListener(EventType type, UnityAction<Object> action)
+    public void AddEventListener(EventType type, UnityAction<object> action)
     {
         if (!eventDic.ContainsKey(type))
         {
@@ -32,7 +32,7 @@ public class EventCenter
         }
     }
 
-    public void RemoveEventListenter(EventType type, UnityAction<Object> action)
+    public void RemoveEventListenter(EventType type, UnityAction<object> action)
     {
         if (eventDic.ContainsKey(type))
         {
@@ -40,7 +40,7 @@ public class EventCenter
         }
     }
 
-    public void EventTriger(EventType type, Object obj)
+    public void EventTriger(EventType type, object obj)
     {
         if (eventDic.ContainsKey(type))
         {
