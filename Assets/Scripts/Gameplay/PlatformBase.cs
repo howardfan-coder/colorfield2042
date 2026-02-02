@@ -36,10 +36,12 @@ public class Platform : MonoBehaviour
         if (this.colorType == colorType)
         {
             tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 100);
+            tilemapCollider2D.enabled = false;
         }
         else
         {
             tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 255);
+            tilemapCollider2D.enabled = true;
         }
     }
 }
