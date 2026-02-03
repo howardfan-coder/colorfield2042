@@ -5,6 +5,7 @@ using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
+using UnityEngine.U2D;
 
 public class TilemapBase : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class TilemapBase : MonoBehaviour
         tilemap = gameObject.GetComponent<Tilemap>();
         tilemapCollider2D = gameObject.GetComponent<TilemapCollider2D>();
         eventCenter.AddEventListener(EventType.ColorChange, OnColorChanged);
+        tilemap.color = ColorVisualMap.GetBaseColor(colorType);
     }
 
     // Update is called once per frame
@@ -40,13 +42,13 @@ public class TilemapBase : MonoBehaviour
     {
         if (colorType == type && colorType != ColorType.WHITE)
         {
-            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 100);
-            tilemapCollider2D.enabled = false;
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1);
+            tilemapCollider2D.enabled = true;
         }
         else
         {
-            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 255);
-            tilemapCollider2D.enabled = true;
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0.25f);
+            tilemapCollider2D.enabled = false;
         }
     }
 }
