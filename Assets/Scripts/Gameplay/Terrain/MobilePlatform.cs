@@ -55,7 +55,7 @@ public class MobilePlatform : MonoBehaviour
 
     public virtual void ChangespriteState(ColorType type)
     {
-        if (colorType == type && colorType != ColorType.WHITE)
+        if (colorType == type || colorType == ColorType.WHITE)
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1);
             collider.enabled = true;
