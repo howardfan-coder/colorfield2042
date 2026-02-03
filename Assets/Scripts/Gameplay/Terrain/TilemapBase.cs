@@ -45,7 +45,7 @@ public class TilemapBase : MonoBehaviour
         }
         else
         {
-            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0.25);
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0.25f);
             tilemapCollider2D.enabled = false;
         }
     }
