@@ -86,7 +86,8 @@ namespace Core.CelesteLikeMovement
             if (hit && hit.collider)
             {
                 color = hit.collider.GetComponent<Ground>().GroundColor;
-                EffectControl.JumpDust(position, color, forward);
+                //TODO
+                // EffectControl.JumpDust(position, color, forward);
             }
         }
 
@@ -120,7 +121,9 @@ namespace Core.CelesteLikeMovement
             if (hit && hit.collider)
             {
                 color = hit.collider.GetComponent<Ground>().GroundColor;
-                EffectControl.LandDust(position, color);
+                
+                //TODO: LandDust特效待实现
+                // EffectControl.LandDust(position, color);
             }
         }
 

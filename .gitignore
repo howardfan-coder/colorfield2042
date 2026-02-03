@@ -16,3 +16,12 @@ UserSettings/
 *.booproj
 
 .DS_Store
+
+# 调试
+Assets/Scenes/Test1.unity
+Assets/Scenes/Test1.unity.meta
+Assets/Scripts/Gameplay/ColorUnitTest.cs
+Assets/Scripts/Gameplay/ColorUnitTest.cs.meta
+UpgradeLog.htm
+
+

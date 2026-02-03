@@ -12,6 +12,8 @@ namespace Core.CelesteLikeMovement
     /// </summary>
     public interface ISpriteControl
     {
+        void SetSpriteIndex(int index);
+        
         void Trail(int face);
 
         void Scale(Vector2 localScale);
