@@ -32,6 +32,7 @@ public class ColorManager : MonoBehaviour
         decayTimer = decayDuration;
 
         ApplyVisualColor(1f);
+        eventCenter.EventTriger(EventType.ColorChange, (object)currentColorType);
     }
 
     private void UpdateVisualColor()

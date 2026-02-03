@@ -15,6 +15,7 @@ namespace Core.CelesteLikeMovement
     public partial class PlayerController
     {
         private readonly int GroundMask;
+        private readonly int CollectableMask;
 
         float varJumpTimer;
         float varJumpSpeed; //
@@ -64,6 +65,7 @@ namespace Core.CelesteLikeMovement
             this.stateMachine.AddState(new DashState(this));
             this.stateMachine.AddState(new ClimbState(this));
             this.GroundMask = LayerMask.GetMask("Ground");
+            this.CollectableMask = LayerMask.GetMask("Collectable");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -238,6 +240,8 @@ namespace Core.CelesteLikeMovement
             //更新位置
             UpdateCollideX(Speed.x * deltaTime);
             UpdateCollideY(Speed.y * deltaTime);
+
+            CheckCollectables();
 
             UpdateHair(deltaTime);
 

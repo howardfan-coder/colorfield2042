@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Core.CelesteLikeMovement;
 
-public class ColorBall : MonoBehaviour
+public class ColorBall : MonoBehaviour, ICollectable
 {
     [Header("Color Type")]
     public ColorType colorType;
@@ -26,7 +27,6 @@ public class ColorBall : MonoBehaviour
 
     void Start()
     {
-        eventCenter.AddEventListener(EventType.ColorChange, _onColorChanged);
     }
 
     private void ApplyVisualColor()
@@ -39,6 +39,7 @@ public class ColorBall : MonoBehaviour
         isAvailable = false;
         spriteRenderer.enabled = false;
         col.enabled = false;
+        eventCenter.AddEventListener(EventType.ColorChange, _onColorChanged);
     }
 
     public void Respawn()
@@ -46,6 +47,7 @@ public class ColorBall : MonoBehaviour
         isAvailable = true;
         spriteRenderer.enabled = true;
         col.enabled = true;
+        eventCenter.RemoveEventListenter(EventType.ColorChange, _onColorChanged);
     }
 
     private void _onColorChanged(object info)
@@ -53,16 +55,33 @@ public class ColorBall : MonoBehaviour
         Invoke(nameof(Respawn), respawnDelay);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (!isAvailable) return;
+
+    //    playerColorManager = other.GetComponent<ColorManager>();
+    //    if (playerColorManager == null) return;
+
+    //    playerColorManager.PickColor(colorType);
+
+    //    Consume();
+    //}
+
+    public void OnCollect(PlayerController player)
     {
         if (!isAvailable) return;
 
-        playerColorManager = other.GetComponent<ColorManager>();
-        if (playerColorManager == null) return;
-
-        playerColorManager.PickColor(colorType);
-
-        Consume();
+        // 尝试从 PlayerRenderer (SpriteControl) 获取 ColorManager
+        MonoBehaviour view = player.SpriteControl as MonoBehaviour;
+        if (view != null)
+        {
+            playerColorManager = view.GetComponent<ColorManager>();
+            if (playerColorManager != null)
+            {
+                playerColorManager.PickColor(colorType);
+                Consume();
+            }
+        }
     }
 
     private void OnDestroy()

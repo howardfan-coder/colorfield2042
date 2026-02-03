@@ -30,6 +30,21 @@ namespace Core.CelesteLikeMovement
             UpdateCollideY(adjust.y);
         }
 
+        //拾取检测
+        public void CheckCollectables()
+        {
+            Vector2 origin = this.Position + collider.position;
+            Collider2D[] hits = Physics2D.OverlapBoxAll(origin, collider.size, 0, CollectableMask);
+            foreach (var hit in hits)
+            {
+                ICollectable collectable = hit.GetComponent<ICollectable>();
+                if (collectable != null)
+                {
+                    collectable.OnCollect(this);
+                }
+            }
+        }
+
         //碰撞检测
         public bool CollideCheck(Vector2 position, Vector2 dir, float dist = 0)
         {
