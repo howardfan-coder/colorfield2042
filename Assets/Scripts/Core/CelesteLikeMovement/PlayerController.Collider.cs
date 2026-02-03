@@ -1,5 +1,4 @@
-﻿
-// using Myd.Common;
+﻿// using Myd.Common;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +12,9 @@ namespace Core.CelesteLikeMovement
     /// </summary>
     public partial class PlayerController
     {
-        const float STEP = 0.1f;  //碰撞检测步长，对POINT检测用
-        const float DEVIATION = 0.02f;  //碰撞检测误差
+         const float STEP = 0.1f;  //碰撞检测步长，对POINT检测用
+         const float DEVIATION = 0.02f;  //碰撞检测误差
+        const float PLATFORM_PROBE = 0.2f; // extra cast depth to keep contact on fast-moving platforms
 
         private readonly Rect normalHitbox = new Rect(0, -0.25f, 0.8f, 1.1f);
         private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.8f, 0.6f);
@@ -133,7 +133,7 @@ namespace Core.CelesteLikeMovement
         private bool CheckGround(Vector2 offset)
         {
             Vector2 origion = this.Position + collider.position + offset;
-            RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, GroundMask);
+            RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION + PLATFORM_PROBE, GroundMask);
             if (hit && hit.normal == Vector2.up)
             {
                 return true;
@@ -376,3 +376,4 @@ namespace Core.CelesteLikeMovement
         //}
     }
 }
+

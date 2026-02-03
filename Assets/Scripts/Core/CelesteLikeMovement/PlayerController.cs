@@ -15,6 +15,10 @@ namespace Core.CelesteLikeMovement
     public partial class PlayerController
     {
         private readonly int GroundMask;
+        private readonly int MoveGroundMask;
+        private Collider2D ridingPlatformPrev;
+        private Vector2 ridingPlatformPosPrev;
+        private Vector2 ridingPlatformDelta;
 
         float varJumpTimer;
         float varJumpSpeed; //
@@ -63,7 +67,8 @@ namespace Core.CelesteLikeMovement
             this.stateMachine.AddState(new NormalState(this));
             this.stateMachine.AddState(new DashState(this));
             this.stateMachine.AddState(new ClimbState(this));
-            this.GroundMask = LayerMask.GetMask("Ground");
+            this.GroundMask = LayerMask.GetMask("Ground", "MoveGround");
+            this.MoveGroundMask = LayerMask.GetMask("MoveGround");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -231,17 +236,23 @@ namespace Core.CelesteLikeMovement
                 else
                     launchedTimer = 0;
 
-            }
-
-            //状态机更新逻辑
-            stateMachine.Update(deltaTime);
-            //更新位置
-            UpdateCollideX(Speed.x * deltaTime);
-            UpdateCollideY(Speed.y * deltaTime);
-
-            UpdateHair(deltaTime);
-
-            UpdateCamera(deltaTime);
+                // Track platform displacement underfoot (MoveGround layer only).
+                UpdatePlatformRide();
+ 
+             }
+ 
+             //状态机更新逻辑
+             stateMachine.Update(deltaTime);
+             //更新位置
+             UpdateCollideX(Speed.x * deltaTime);
+             UpdateCollideY(Speed.y * deltaTime);
+ 
+             // Apply platform displacement after own movement to keep sticking to moving ground.
+             ApplyPlatformRide();
+ 
+             UpdateHair(deltaTime);
+ 
+             UpdateCamera(deltaTime);
         }
 
         //处理跳跃,跳跃时候，会给跳跃前方一个额外的速度
@@ -479,5 +490,55 @@ namespace Core.CelesteLikeMovement
                 return !this.wasOnGround && this.OnGround;
             }
         }
-    }
-}
+
+        private void UpdatePlatformRide()
+        {
+            // Reset each frame; only set when standing on MoveGround.
+            ridingPlatformDelta = Vector2.zero;
+
+            // Not grounded or rising -> clear platform reference.
+            if (!onGround || Speed.y > 0)
+            {
+                ridingPlatformPrev = null;
+                return;
+            }
+
+            // Probe only MoveGround layer to read its displacement.
+            Vector2 origin = this.Position + collider.position;
+            RaycastHit2D hit = Physics2D.BoxCast(origin, collider.size, 0, Vector2.down, DEVIATION + PLATFORM_PROBE, MoveGroundMask);
+            if (!hit || hit.collider == null)
+            {
+                ridingPlatformPrev = null;
+                return;
+            }
+
+            Collider2D platform = hit.collider;
+            Vector2 platformPos = platform.transform.position;
+
+            // First frame on this platform: initialize position baseline.
+            if (ridingPlatformPrev != platform)
+            {
+                ridingPlatformPrev = platform;
+                ridingPlatformPosPrev = platformPos;
+                return;
+            }
+
+            // Same platform: accumulate delta.
+            ridingPlatformDelta = platformPos - ridingPlatformPosPrev;
+            ridingPlatformPosPrev = platformPos;
+        }
+
+        private void ApplyPlatformRide()
+        {
+            if (ridingPlatformPrev == null)
+                return;
+
+            if (ridingPlatformDelta.x != 0)
+                UpdateCollideX(ridingPlatformDelta.x);
+            if (ridingPlatformDelta.y != 0)
+                UpdateCollideY(ridingPlatformDelta.y);
+
+            ridingPlatformDelta = Vector2.zero;
+        }
+     }
+ }
