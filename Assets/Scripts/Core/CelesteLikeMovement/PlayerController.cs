@@ -19,6 +19,7 @@ namespace Core.CelesteLikeMovement
         private Collider2D ridingPlatformPrev;
         private Vector2 ridingPlatformPosPrev;
         private Vector2 ridingPlatformDelta;
+        private readonly int CollectableMask;
 
         float varJumpTimer;
         float varJumpSpeed; //
@@ -69,6 +70,7 @@ namespace Core.CelesteLikeMovement
             this.stateMachine.AddState(new ClimbState(this));
             this.GroundMask = LayerMask.GetMask("Ground", "MoveGround");
             this.MoveGroundMask = LayerMask.GetMask("MoveGround");
+            this.CollectableMask = LayerMask.GetMask("Collectable");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -249,7 +251,7 @@ namespace Core.CelesteLikeMovement
  
              // Apply platform displacement after own movement to keep sticking to moving ground.
              ApplyPlatformRide();
- 
+             CheckCollectables();
              UpdateHair(deltaTime);
  
              UpdateCamera(deltaTime);
