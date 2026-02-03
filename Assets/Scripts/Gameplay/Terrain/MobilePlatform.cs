@@ -57,12 +57,12 @@ public class MobilePlatform : MonoBehaviour
     {
         if (colorType == type && colorType != ColorType.WHITE)
         {
-            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 255);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1);
             collider.enabled = true;
         }
         else
         {
-            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 100);
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.25f);
             collider.enabled = false;
         }
     }

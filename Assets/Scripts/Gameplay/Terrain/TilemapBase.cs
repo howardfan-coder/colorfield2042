@@ -40,13 +40,13 @@ public class TilemapBase : MonoBehaviour
     {
         if (colorType == type && colorType != ColorType.WHITE)
         {
-            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 100);
-            tilemapCollider2D.enabled = false;
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1);
+            tilemapCollider2D.enabled = true;
         }
         else
         {
-            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 255);
-            tilemapCollider2D.enabled = true;
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0.25);
+            tilemapCollider2D.enabled = false;
         }
     }
 }
