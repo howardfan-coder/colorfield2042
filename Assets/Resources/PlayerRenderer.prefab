@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3880353424430098624}
   - component: {fileID: 2025994584794608277}
+  - component: {fileID: -6945947328095334004}
   m_Layer: 0
   m_Name: PlayerRenderer
   m_TagString: Untagged
@@ -135,3 +136,17 @@ MonoBehaviour:
   hair: {fileID: 0}
   hairSprite01: {fileID: 0}
   hairSprite02: {fileID: 0}
+--- !u!114 &-6945947328095334004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7458586858354254861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9dd647253a1e694bb3e8d6dea661f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 450711965654491232}
+  decayDuration: 3

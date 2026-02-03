@@ -31,6 +31,7 @@ public class MobilePlatform : MonoBehaviour
         _start = new Vector2(startPoint.position.x, startPoint.position.y);
         _end = new Vector2(endPoint.position.x, endPoint.position.y);
         _target = _end;
+        sprite.color = ColorVisualMap.GetBaseColor(colorType);
     }
 
     // Update is called once per frame

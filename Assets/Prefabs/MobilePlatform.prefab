@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8520486695086756167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MobilePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 724142748636442721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8443019950783619669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4759906364088718427}
   - component: {fileID: 5987697368375267289}
   - component: {fileID: 9086083935744065895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MobilePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
