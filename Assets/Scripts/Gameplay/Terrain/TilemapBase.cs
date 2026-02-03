@@ -5,6 +5,7 @@ using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
+using UnityEngine.U2D;
 
 public class TilemapBase : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class TilemapBase : MonoBehaviour
         tilemap = gameObject.GetComponent<Tilemap>();
         tilemapCollider2D = gameObject.GetComponent<TilemapCollider2D>();
         eventCenter.AddEventListener(EventType.ColorChange, OnColorChanged);
+        tilemap.color = ColorVisualMap.GetBaseColor(colorType);
     }
 
     // Update is called once per frame
