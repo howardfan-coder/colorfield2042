@@ -93,16 +93,17 @@ namespace Core.CelesteLikeMovement
             }
         }
 
-        public void Init(Bounds bounds, Vector2 startPosition)
+        // 修改 Init 方法签名，接收配置
+        public void Init(Bounds bounds, Vector2 startPosition, PlayerConfig config)
         {
-            //根据进入的方式,决定初始状态
+            this.config = config; // 保存配置引用
+
             this.stateMachine.State = (int)EActionState.Normal;
             this.lastDashes = this.dashes = 1;
-
-            this.Speed = Vector2.zero;
-
             this.Position = startPosition;
-            this.collider = normalHitbox;
+            
+            // 使用配置初始化碰撞盒
+            this.collider = this.config.normalHitbox;
 
             this.SpriteControl.SetSpriteScale(NORMAL_SPRITE_SCALE);
 
@@ -444,18 +445,18 @@ namespace Core.CelesteLikeMovement
         {
             get
             {
-                return this.collider == this.duckHitbox || this.collider == this.duckHurtbox;
+                return this.collider == this.config.duckHitbox || this.collider == this.config.duckHitbox;
             }
             set
             {
                 if (value)
                 {
-                    this.collider = this.duckHitbox;
+                    this.collider = this.config.duckHitbox;
                     return;
                 }
                 else
                 {
-                    this.collider = this.normalHitbox;
+                    this.collider = this.config.normalHitbox;
                 }
                 PlayDuck(value);
             }
@@ -469,7 +470,7 @@ namespace Core.CelesteLikeMovement
                 if (!Ducking)
                     return true;
                 Rect lastCollider = this.collider;
-                this.collider = normalHitbox;
+                this.collider = this.config.normalHitbox;
                 bool noCollide = !CollideCheck(this.Position, Vector2.zero);
                 this.collider = lastCollider;
                 return noCollide;
@@ -481,7 +482,7 @@ namespace Core.CelesteLikeMovement
             Vector2 oldP = Position;
             Rect oldC = this.collider;
             Position = at;
-            this.collider = duckHitbox;
+            this.collider = this.config.duckHitbox;
 
             bool ret = !CollideCheck(this.Position, Vector2.zero);
 
@@ -512,7 +513,7 @@ namespace Core.CelesteLikeMovement
 
             // Probe only MoveGround layer to read its displacement.
             Vector2 origin = this.Position + collider.position;
-            RaycastHit2D hit = Physics2D.BoxCast(origin, collider.size, 0, Vector2.down, DEVIATION + PLATFORM_PROBE, MoveGroundMask);
+            RaycastHit2D hit = Physics2D.BoxCast(origin, collider.size, 0, Vector2.down, DEVIATION + this.config.platformProbe, MoveGroundMask);
             if (!hit || hit.collider == null)
             {
                 ridingPlatformPrev = null;

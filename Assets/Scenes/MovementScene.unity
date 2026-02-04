@@ -1207,6 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 295030277}
   gameCamera: {fileID: 1144476107}
+  playerConfig: {fileID: 11400000, guid: 0381ef463b05bbd428c993208036ad17, type: 2}
 --- !u!4 &1924243333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4107327774679458238, guid: fed03dd8f0c8929468dca0c701fafee7,

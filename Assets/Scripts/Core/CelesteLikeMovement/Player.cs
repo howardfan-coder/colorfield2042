@@ -19,16 +19,19 @@ namespace Core.CelesteLikeMovement
         private Bounds bounds;
         private Vector2 startPosition;
 
+        private PlayerConfig config; // Player类需要缓存一下config以便重生使用
+
         public Player(IGameContext gameContext)
         {
             this.gameContext = gameContext;
         }
 
         //加载玩家实体
-        public void Reload(Bounds bounds, Vector2 startPosition)
+        public void Reload(Bounds bounds, Vector2 startPosition, PlayerConfig config)
         {
             this.bounds = bounds;
             this.startPosition = startPosition;
+            this.config = config;
 
             try
             {
@@ -42,7 +45,7 @@ namespace Core.CelesteLikeMovement
             this.playerRenderer.Reload();
             //初始化
             this.playerController = new PlayerController(playerRenderer, gameContext.EffectControl);
-            this.playerController.Init(bounds, startPosition);
+            this.playerController.Init(bounds, startPosition, config);
 
             PlayerParams playerParams = Resources.Load<PlayerParams>("PlayerParam");
             playerParams.SetReloadCallback(() => this.playerController.RefreshAbility());
@@ -54,7 +57,7 @@ namespace Core.CelesteLikeMovement
             if (playerController.CheckDeadGround())
             {
                 EventCenter.Instance.EventTriger(EventType.PlayerDeath, null);
-                playerController.Init(this.bounds, this.startPosition);
+                playerController.Init(this.bounds, this.startPosition, this.config);
             }
 
             playerController.Update(deltaTime);
