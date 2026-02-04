@@ -17,7 +17,7 @@ namespace Core.CelesteLikeMovement
         const float PLATFORM_PROBE = 0.2f; // extra cast depth to keep contact on fast-moving platforms
 
         private readonly Rect normalHitbox = new Rect(0, 0.23f, 0.65f, 0.55f);
-        private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.65f, 0.6f);
+        private readonly Rect duckHitbox = new Rect(0, 0.18f, 0.65f, 0.5f);
         private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.65f, 0.9f);
         private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.65f, 0.4f);
 

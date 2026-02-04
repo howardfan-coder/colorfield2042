@@ -1,5 +1,6 @@
 ﻿// using DG.Tweening;
 using System.Collections;
+using System.Reflection;
 using UnityEngine;
 
 namespace Core.CelesteLikeMovement
@@ -104,17 +105,17 @@ namespace Core.CelesteLikeMovement
         public IEffectControl EffectControl { get; }
         public ISoundControl SoundControl { get; }
 
-
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             
             if (player == null) return;
-            var controllerField = typeof(Player).GetField("playerController", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            var controllerField = typeof(Player).GetField("playerController", BindingFlags.NonPublic | BindingFlags.Instance);
             var ctrl = controllerField?.GetValue(player) as PlayerController;
             ctrl?.Draw(EGizmoDrawType.ClimbCheck);
             ctrl?.Draw(EGizmoDrawType.SlipCheck);
             ctrl?.DrawAllColliders();
         }
+#endif
     }
-
 }

@@ -64,7 +64,7 @@ namespace Core.CelesteLikeMovement
             // Physics uses rect.position as BoxCast center, so gizmo mirrors that.
             Vector2 center = Position + rect.position;
             Vector3 size = new Vector3(rect.size.x, rect.size.y, 0f);
-             Gizmos.DrawWireCube(center, size);
+            Gizmos.DrawWireCube(center, size);
  #if UNITY_EDITOR
              Handles.Label(center, label);
  #endif
