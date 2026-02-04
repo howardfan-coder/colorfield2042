@@ -23,6 +23,10 @@ namespace Core.CelesteLikeMovement
         // private SceneEffectManager sceneEffectManager;
         [SerializeField]
         private SceneCamera gameCamera;
+
+        [Header("Settings")]
+        [SerializeField] private PlayerConfig playerConfig; // 在 Inspector 中拖入创建的 Config资源
+
         //玩家
         Player player;
 
@@ -42,7 +46,7 @@ namespace Core.CelesteLikeMovement
             yield return null;
 
             //加载玩家
-            player.Reload(level.Bounds, level.StartPosition);
+            player.Reload(level.Bounds, level.StartPosition, playerConfig);
             this.gameState = EGameState.Play;
             yield return null;
         }

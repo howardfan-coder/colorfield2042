@@ -72,16 +72,17 @@ namespace Core.CelesteLikeMovement
     }
     public struct VisualButton
     {
-        private KeyCode key;
+        private KeyCode[] keys;
         private float bufferTime;
         private bool consumed;
         private float bufferCounter;
-        public VisualButton(KeyCode key) : this(key, 0) {
-        }
+        public VisualButton(KeyCode key) : this(new KeyCode[] { key }, 0) { }
 
-        public VisualButton(KeyCode key, float bufferTime)
+        public VisualButton(KeyCode[] keys) : this(keys, 0) { }
+
+        public VisualButton(KeyCode[] keys, float bufferTime)
         {
-            this.key = key;
+            this.keys = keys ?? Array.Empty<KeyCode>();
             this.bufferTime = bufferTime;
             this.consumed = false;
             this.bufferCounter = 0f;
@@ -93,12 +94,12 @@ namespace Core.CelesteLikeMovement
 
         public bool Pressed()
         {
-            return UnityEngine.Input.GetKeyDown(key)||(!this.consumed && (this.bufferCounter > 0f));
+            return AnyKeyDown() || (!this.consumed && (this.bufferCounter > 0f));
         }
 
         public bool Checked()
         {
-            return UnityEngine.Input.GetKey(key);
+            return AnyKeyHeld();
         }
 
         public void Update(float deltaTime)
@@ -106,12 +107,12 @@ namespace Core.CelesteLikeMovement
             this.consumed = false;
             this.bufferCounter -= deltaTime;
             bool flag = false;
-            if (UnityEngine.Input.GetKeyDown(key))
+            if (AnyKeyDown())
             {
                 this.bufferCounter = this.bufferTime;
                 flag = true;
             }
-            else if (UnityEngine.Input.GetKey(key))
+            else if (AnyKeyHeld())
             {
                 flag = true;
             }
@@ -121,13 +122,33 @@ namespace Core.CelesteLikeMovement
                 return;
             }
         }
+
+        private bool AnyKeyDown()
+        {
+            for (int i = 0; i < keys.Length; i++)
+            {
+                if (UnityEngine.Input.GetKeyDown(keys[i]))
+                    return true;
+            }
+            return false;
+        }
+
+        private bool AnyKeyHeld()
+        {
+            for (int i = 0; i < keys.Length; i++)
+            {
+                if (UnityEngine.Input.GetKey(keys[i]))
+                    return true;
+            }
+            return false;
+        }
     }
     public static class GameInput
     {
-        // PS5 DualSense: Cross=JoystickButton0, Square=JoystickButton2, L2=JoystickButton6
-        public static VisualButton Jump = new VisualButton(KeyCode.JoystickButton0, 0.08f);
-        public static VisualButton Dash = new VisualButton(KeyCode.JoystickButton2, 0.08f);
-        public static VisualButton Grab = new VisualButton(KeyCode.JoystickButton6);
+        // 支持手柄+键盘：Jump 加回空格，Dash 加回 K，Grab 加回 J
+        public static VisualButton Jump = new VisualButton(new[] { KeyCode.JoystickButton0, KeyCode.Space }, 0.08f);
+        public static VisualButton Dash = new VisualButton(new[] { KeyCode.JoystickButton2, KeyCode.K }, 0.08f);
+        public static VisualButton Grab = new VisualButton(new[] { KeyCode.JoystickButton6, KeyCode.J });
         public static VirtualJoystick Aim = new VirtualJoystick();
         public static Vector2 LastAim;
 
