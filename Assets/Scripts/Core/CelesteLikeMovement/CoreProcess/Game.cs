@@ -103,7 +103,18 @@ namespace Core.CelesteLikeMovement
 
         public IEffectControl EffectControl { get; }
         public ISoundControl SoundControl { get; }
-        
+
+
+        private void OnDrawGizmos()
+        {
+            
+            if (player == null) return;
+            var controllerField = typeof(Player).GetField("playerController", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            var ctrl = controllerField?.GetValue(player) as PlayerController;
+            ctrl?.Draw(EGizmoDrawType.ClimbCheck);
+            ctrl?.Draw(EGizmoDrawType.SlipCheck);
+            ctrl?.DrawAllColliders();
+        }
     }
 
 }

@@ -16,10 +16,10 @@ namespace Core.CelesteLikeMovement
          const float DEVIATION = 0.02f;  //碰撞检测误差
         const float PLATFORM_PROBE = 0.2f; // extra cast depth to keep contact on fast-moving platforms
 
-        private readonly Rect normalHitbox = new Rect(0, -0.25f, 0.8f, 1.1f);
-        private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.8f, 0.6f);
-        private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.8f, 0.9f);
-        private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.4f);
+        private readonly Rect normalHitbox = new Rect(0, 0.23f, 0.65f, 0.55f);
+        private readonly Rect duckHitbox = new Rect(0, -0.5f, 0.65f, 0.6f);
+        private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.65f, 0.9f);
+        private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.65f, 0.4f);
 
         private Rect collider;
 
@@ -153,7 +153,7 @@ namespace Core.CelesteLikeMovement
             {
                 return true;
             }
-            return false;
+            return false; 
         }
 
         //根据整个关卡的边缘框进行检测,确保人物在关卡的框内.
