@@ -45,6 +45,12 @@ namespace Core.CelesteLikeMovement
             }
         }
 
+        public bool CheckDeadGround()
+        {
+            Vector2 origion = this.Position + collider.position;
+            return Physics2D.OverlapBox(origion, collider.size, 0, DeadGroundMask);
+        }
+
         //碰撞检测
         public bool CollideCheck(Vector2 position, Vector2 dir, float dist = 0)
         {

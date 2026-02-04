@@ -16,6 +16,9 @@ namespace Core.CelesteLikeMovement
 
         private IGameContext gameContext;
 
+        private Bounds bounds;
+        private Vector2 startPosition;
+
         public Player(IGameContext gameContext)
         {
             this.gameContext = gameContext;
@@ -24,6 +27,9 @@ namespace Core.CelesteLikeMovement
         //加载玩家实体
         public void Reload(Bounds bounds, Vector2 startPosition)
         {
+            this.bounds = bounds;
+            this.startPosition = startPosition;
+
             try
             {
                 this.playerRenderer = UnityEngine.Object.Instantiate(Resources.Load<PlayerRenderer>("PlayerRenderer"));
@@ -45,6 +51,12 @@ namespace Core.CelesteLikeMovement
 
         public void Update(float deltaTime)
         {
+            if (playerController.CheckDeadGround())
+            {
+                EventCenter.Instance.EventTriger(EventType.PlayerDeath, null);
+                playerController.Init(this.bounds, this.startPosition);
+            }
+
             playerController.Update(deltaTime);
             Render();
         }

@@ -17,6 +17,7 @@ public class TilemapBase : MonoBehaviour
     private void Awake()
     {
         eventCenter = EventCenter.Instance;
+        UpdateColor();
     }
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,6 @@ public class TilemapBase : MonoBehaviour
         tilemap = gameObject.GetComponent<Tilemap>();
         tilemapCollider2D = gameObject.GetComponent<TilemapCollider2D>();
         eventCenter.AddEventListener(EventType.ColorChange, OnColorChanged);
-        tilemap.color = ColorVisualMap.GetBaseColor(colorType);
     }
 
     // Update is called once per frame
@@ -49,6 +49,22 @@ public class TilemapBase : MonoBehaviour
         {
             tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0.25f);
             tilemapCollider2D.enabled = false;
+        }
+    }
+
+    // Called when a value is changed in the Inspector
+    private void OnValidate()
+    {
+        UpdateColor();
+    }
+
+    private void UpdateColor()
+    {
+        Tilemap tile = GetComponent<Tilemap>();
+
+        if (tile != null)
+        {
+            tile.color = ColorVisualMap.GetBaseColor(colorType);
         }
     }
 }

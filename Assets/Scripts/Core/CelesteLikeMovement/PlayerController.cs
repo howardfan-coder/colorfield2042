@@ -16,10 +16,11 @@ namespace Core.CelesteLikeMovement
     {
         private readonly int GroundMask;
         private readonly int MoveGroundMask;
+        private readonly int CollectableMask;
+        private readonly int DeadGroundMask;
         private Collider2D ridingPlatformPrev;
         private Vector2 ridingPlatformPosPrev;
         private Vector2 ridingPlatformDelta;
-        private readonly int CollectableMask;
 
         float varJumpTimer;
         float varJumpSpeed; //
@@ -71,6 +72,7 @@ namespace Core.CelesteLikeMovement
             this.GroundMask = LayerMask.GetMask("Ground", "MoveGround");
             this.MoveGroundMask = LayerMask.GetMask("MoveGround");
             this.CollectableMask = LayerMask.GetMask("Collectable");
+            this.DeadGroundMask = LayerMask.GetMask("DeadGround");
 
             this.Facing  = Facings.Right;
             this.LastAim = Vector2.right;
@@ -96,6 +98,9 @@ namespace Core.CelesteLikeMovement
             //根据进入的方式,决定初始状态
             this.stateMachine.State = (int)EActionState.Normal;
             this.lastDashes = this.dashes = 1;
+
+            this.Speed = Vector2.zero;
+
             this.Position = startPosition;
             this.collider = normalHitbox;
 
@@ -111,7 +116,7 @@ namespace Core.CelesteLikeMovement
             //);
 
             //this.player.SetTrailColor(gradient);
-
+            this.Ducking = false;
         }
 
         public void Update(float deltaTime)

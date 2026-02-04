@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: aa5d581d6ba245a4f86589ba094bca93
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemyidle_720_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6c48878cba2ae43aebe78e241d7e78
+      internalID: 97355422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f977cd98a1f5d944eb5dfc48287dbc51
+      internalID: -1927026099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920b2a56f7757ca46b4b4ccb202df573
+      internalID: -2104192442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70e9fa262b65c740b7ff06a6d55a4a1
+      internalID: 1914107313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18b3af7d763306489000c28559216fc
+      internalID: -1384077846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16c68d1795d93a4e8c5ba74c4ef6946
+      internalID: 311678223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1d2cedcd6251e41bb72843202cc34f
+      internalID: -517559896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 443.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11dd0e0b82eedb4bb56f3042ec18147
+      internalID: -1381457272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d79ca7ee679c80419b2287437f4ea3b
+      internalID: -1658045666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f648f0d3ccce95a4d92090ebb0b2a80b
+      internalID: -38971603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_10
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b375f58d6301864485a09c828d1afb5
+      internalID: -1647694541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_11
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20115558944dcc4fa6737f810f7ab2b
+      internalID: 1697101451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd85cffc63de3a449addfeb394428700
+      internalID: 2018769057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3667fbded876f148bbf2461d5c7a3ff
+      internalID: 1347998953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_14
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77672387b4bc0ac4bada6862c6dc2cac
+      internalID: -1827879549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_15
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 355.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede8c2f6f7cf80f449cbc346903134c8
+      internalID: 348350644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdacfd38623659945a103e773ffe5c84
+      internalID: 1527507336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a76c56ed93eb4b449afd0b83e8b6bb8
+      internalID: -1831011904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bab0921fec7dc44bf50a556c0aaed2
+      internalID: 397310910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_19
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28c377f6aba298429d419ce620d0159
+      internalID: -1533309924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_20
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72203f4a4b1eaa34886a0dfbf4b0f946
+      internalID: -1063357760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_21
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c505498233e46df46a169c72553e99c6
+      internalID: 1320644196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_22
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a681323409429c4a8277e2197e965b7
+      internalID: 1828533334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_23
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 267.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe263c03332508c4499f2d165871333b
+      internalID: -1884427151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48146bc23c3a164499700aa614cd3eba
+      internalID: 343128235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_25
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32131e937e265e49bb2a4415c13b4bc
+      internalID: 1191275172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4e20ec2c30f9c4a91673f041c4b3df
+      internalID: 2121354627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b3b4c118212504880fb099694449db
+      internalID: 1269389279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dcfcc1f5cf86e4bbb33863d1c4a221
+      internalID: -387434740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c002af0610fa04ba9489ac5d2e8a27
+      internalID: 1793259348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_30
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0d3b86c081e2d42aad5ffe3c506e1b
+      internalID: 1955537212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_31
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 179.33334
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d056da9303fbbb41888cb0cd373b3d2
+      internalID: -167427566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fda3c38fc30934792bc961464f4a4f
+      internalID: 360872090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_33
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeadc79bcab004043a188e5662fe78dd
+      internalID: 2035938039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43d180a6a1069f49a3a070664c957ad
+      internalID: -108490102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_35
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b4cc77fef8fa247a0625760f5d6a32
+      internalID: 991826097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_36
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36868c710f61d14b9744e93dc52c531
+      internalID: 362377744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_37
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8fc0b25f1d2b44793bca4396095393
+      internalID: -1005025595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_38
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0c15c7c8ee3304f9dd5413e9e84f26
+      internalID: 107956530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_39
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 91.333336
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5bab55ca67e0c43ba524eb447fc988
+      internalID: -305916257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32987cd73c0ef3e40b5ec4c8c1c6b4c3
+      internalID: -1787461592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_41
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161cb69291a5ed04e94536704f379495
+      internalID: -1180407098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_42
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52033b114b46223449a5ffc016bec171
+      internalID: 1035333088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_43
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4238302e035b8bc4bbc83e61cac845ee
+      internalID: 2134800463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_44
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855c1c9c35f438f42be78f2ad4cf2a6a
+      internalID: 996998836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_45
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d614e3ee3e9110a439709b3623d9d1d2
+      internalID: 48835599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_46
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067f77165ff881746ae68436e2fd0d1c
+      internalID: -949517211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle_720_47
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3.3333359
+        width: 90
+        height: 88.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9afaee3a18e28847aef72173c50d406
+      internalID: 359801449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemyidle_720_0: 97355422
+      enemyidle_720_1: -1927026099
+      enemyidle_720_10: -1647694541
+      enemyidle_720_11: 1697101451
+      enemyidle_720_12: 2018769057
+      enemyidle_720_13: 1347998953
+      enemyidle_720_14: -1827879549
+      enemyidle_720_15: 348350644
+      enemyidle_720_16: 1527507336
+      enemyidle_720_17: -1831011904
+      enemyidle_720_18: 397310910
+      enemyidle_720_19: -1533309924
+      enemyidle_720_2: -2104192442
+      enemyidle_720_20: -1063357760
+      enemyidle_720_21: 1320644196
+      enemyidle_720_22: 1828533334
+      enemyidle_720_23: -1884427151
+      enemyidle_720_24: 343128235
+      enemyidle_720_25: 1191275172
+      enemyidle_720_26: 2121354627
+      enemyidle_720_27: 1269389279
+      enemyidle_720_28: -387434740
+      enemyidle_720_29: 1793259348
+      enemyidle_720_3: 1914107313
+      enemyidle_720_30: 1955537212
+      enemyidle_720_31: -167427566
+      enemyidle_720_32: 360872090
+      enemyidle_720_33: 2035938039
+      enemyidle_720_34: -108490102
+      enemyidle_720_35: 991826097
+      enemyidle_720_36: 362377744
+      enemyidle_720_37: -1005025595
+      enemyidle_720_38: 107956530
+      enemyidle_720_39: -305916257
+      enemyidle_720_4: -1384077846
+      enemyidle_720_40: -1787461592
+      enemyidle_720_41: -1180407098
+      enemyidle_720_42: 1035333088
+      enemyidle_720_43: 2134800463
+      enemyidle_720_44: 996998836
+      enemyidle_720_45: 48835599
+      enemyidle_720_46: -949517211
+      enemyidle_720_47: 359801449
+      enemyidle_720_5: 311678223
+      enemyidle_720_6: -517559896
+      enemyidle_720_7: -1381457272
+      enemyidle_720_8: -1658045666
+      enemyidle_720_9: -38971603
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

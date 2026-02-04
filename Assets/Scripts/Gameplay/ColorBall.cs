@@ -22,16 +22,11 @@ public class ColorBall : MonoBehaviour, ICollectable
         spriteRenderer = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
 
-        ApplyVisualColor();
+        UpdateColor();
     }
 
     void Start()
     {
-    }
-
-    private void ApplyVisualColor()
-    {
-        spriteRenderer.color = ColorVisualMap.GetBaseColor(colorType);
     }
 
     private void Consume()
@@ -55,18 +50,6 @@ public class ColorBall : MonoBehaviour, ICollectable
         Invoke(nameof(Respawn), respawnDelay);
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (!isAvailable) return;
-
-    //    playerColorManager = other.GetComponent<ColorManager>();
-    //    if (playerColorManager == null) return;
-
-    //    playerColorManager.PickColor(colorType);
-
-    //    Consume();
-    //}
-
     public void OnCollect(PlayerController player)
     {
         if (!isAvailable) return;
@@ -87,5 +70,20 @@ public class ColorBall : MonoBehaviour, ICollectable
     private void OnDestroy()
     {
         eventCenter.RemoveEventListenter(EventType.ColorChange, _onColorChanged);
+    }
+
+    // Called when a value is changed in the Inspector
+    private void OnValidate()
+    {
+        UpdateColor();
+    }
+
+    private void UpdateColor()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null)
+        {
+            sprite.color = ColorVisualMap.GetBaseColor(colorType);
+        }
     }
 }

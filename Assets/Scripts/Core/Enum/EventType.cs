@@ -5,4 +5,5 @@ using UnityEngine;
 public enum EventType
 {
     ColorChange = 0,
+    PlayerDeath = 1,
 }
