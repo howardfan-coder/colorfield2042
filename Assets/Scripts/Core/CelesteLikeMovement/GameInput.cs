@@ -19,7 +19,56 @@ namespace Core.CelesteLikeMovement
     }
     public struct VirtualJoystick
     {
-        public Vector2 Value { get => new Vector2(UnityEngine.Input.GetAxisRaw("Horizontal"), UnityEngine.Input.GetAxisRaw("Vertical"));}
+        private readonly string stickX;
+        private readonly string stickY;
+        private readonly string dpadX;
+        private readonly string dpadY;
+        private readonly float deadZone;
+
+        public VirtualJoystick(string stickX = "Horizontal", string stickY = "Vertical", string dpadX = "DPadX", string dpadY = "DPadY", float deadZone = 0.1f)
+        {
+            this.stickX = stickX;
+            this.stickY = stickY;
+            this.dpadX = dpadX;
+            this.dpadY = dpadY;
+            this.deadZone = deadZone;
+        }
+
+        private static float SafeAxis(string axisName)
+        {
+            if (string.IsNullOrEmpty(axisName))
+                return 0f;
+            try
+            {
+                return UnityEngine.Input.GetAxisRaw(axisName);
+            }
+            catch (ArgumentException)
+            {
+                return 0f;
+            }
+        }
+
+        public Vector2 Value
+        {
+            get
+            {
+                float x = SafeAxis(stickX);
+                float y = SafeAxis(stickY);
+
+                x = Mathf.Abs(x) > deadZone ? x : 0f;
+                y = Mathf.Abs(y) > deadZone ? y : 0f;
+
+                float dx = SafeAxis(dpadX);
+                float dy = SafeAxis(dpadY);
+
+                if (Mathf.Abs(dx) > deadZone) x = dx;
+                if (Mathf.Abs(dy) > deadZone) y = dy;
+
+                return new Vector2(x, y);
+            }
+        }
+
+
     }
     public struct VisualButton
     {
@@ -75,9 +124,10 @@ namespace Core.CelesteLikeMovement
     }
     public static class GameInput
     {
-        public static VisualButton Jump = new VisualButton(KeyCode.Space, 0.08f);
-        public static VisualButton Dash = new VisualButton(KeyCode.K, 0.08f);
-        public static VisualButton Grab = new VisualButton(KeyCode.J);
+        // PS5 DualSense: Cross=JoystickButton0, Square=JoystickButton2, L2=JoystickButton6
+        public static VisualButton Jump = new VisualButton(KeyCode.JoystickButton0, 0.08f);
+        public static VisualButton Dash = new VisualButton(KeyCode.JoystickButton2, 0.08f);
+        public static VisualButton Grab = new VisualButton(KeyCode.JoystickButton6);
         public static VirtualJoystick Aim = new VirtualJoystick();
         public static Vector2 LastAim;
 

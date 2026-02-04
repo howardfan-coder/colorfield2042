@@ -32,9 +32,28 @@ namespace Core.CelesteLikeMovement
 
         public Vector3 SpritePosition { get => this.spriteRenderer.transform.position; }
 
+        [Header("Sprite Animation")]
+        [SerializeField] private SpriteAnimationClip[] clips;
+        private readonly Dictionary<string, SpriteAnimationClip> clipMap = new();
+        private string currentClip;
+        private int currentFrame;
+        private float frameTimer;
+        private SpriteAnimationClip activeClip;
+
         public void Reload()
         {
-
+            clipMap.Clear();
+            foreach (var clip in clips)
+            {
+                if (clip == null || string.IsNullOrEmpty(clip.name) || clip.frames == null || clip.frames.Length == 0)
+                    continue;
+                clipMap[clip.name] = clip;
+            }
+            if (clipMap.Count > 0)
+            {
+                var first = clips[0];
+                PlayClip(first.name, true);
+            }
         }
 
         public void Render(float deltaTime)
@@ -43,6 +62,8 @@ namespace Core.CelesteLikeMovement
             float tempScaleY = Mathf.MoveTowards(scale.y, currSpriteScale.y, 1.75f * deltaTime);
             this.scale = new Vector2(tempScaleX, tempScaleY);
             this.spriteRenderer.transform.localScale = scale;
+
+            UpdateAnimation(deltaTime);
         }
 
         public void SetSpriteIndex(int index)
@@ -110,5 +131,54 @@ namespace Core.CelesteLikeMovement
             // this.hairSprite01.color = color;
             // this.hairSprite02.color = color;
         }
+
+        public void PlayClip(string name, bool restart = false)
+        {
+            if (!clipMap.TryGetValue(name, out var clip))
+                return;
+
+            if (!restart && currentClip == name && activeClip != null)
+                return;
+
+            currentClip = name;
+            activeClip = clip;
+            currentFrame = 0;
+            frameTimer = 0f;
+            spriteRenderer.sprite = activeClip.frames[0];
+        }
+
+        private void UpdateAnimation(float deltaTime)
+        {
+            if (activeClip == null || activeClip.frames == null || activeClip.frames.Length == 0)
+                return;
+
+            frameTimer += deltaTime;
+            float frameDuration = 1f / Mathf.Max(1f, activeClip.fps);
+            while (frameTimer >= frameDuration)
+            {
+                frameTimer -= frameDuration;
+                currentFrame++;
+                if (currentFrame >= activeClip.frames.Length)
+                {
+                    if (activeClip.loop)
+                        currentFrame = 0;
+                    else
+                    {
+                        currentFrame = activeClip.frames.Length - 1;
+                        frameTimer = 0f;
+                    }
+                }
+                spriteRenderer.sprite = activeClip.frames[currentFrame];
+            }
+        }
     }
-}
+
+    [System.Serializable]
+    public class SpriteAnimationClip
+    {
+        public string name;
+        public Sprite[] frames;
+        public float fps = 8f;
+        public bool loop = true;
+    }
+ }
