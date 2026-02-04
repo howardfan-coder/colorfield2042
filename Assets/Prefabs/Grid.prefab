@@ -17292,7 +17292,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_Origin: {x: 0, y: -1, z: 0}
   m_Size: {x: 60, y: 65, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -17879,7 +17879,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 111, y: 78, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -18911,7 +18911,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 61, y: 85, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -19162,6 +19162,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: L1_MobilePlatform_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8443019950783619669, guid: 6c85cd51ef441164883009a87773377e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19390,6 +19400,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6346005218123977045, guid: 6ae7401f23b242f48875a40b4598bce7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346005218123977045, guid: 6ae7401f23b242f48875a40b4598bce7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.92156863
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19409,6 +19429,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2332774609456589038}
     m_Modifications:
+    - target: {fileID: 3499350503349110501, guid: fed03dd8f0c8929468dca0c701fafee7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499350503349110501, guid: fed03dd8f0c8929468dca0c701fafee7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4107327774679458238, guid: fed03dd8f0c8929468dca0c701fafee7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19497,6 +19527,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: L1_MobilePlatform_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8443019950783619669, guid: 6c85cd51ef441164883009a87773377e,
         type: 3}
@@ -19675,6 +19715,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: L1_MobilePlatform_Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759906364088718427, guid: 6c85cd51ef441164883009a87773377e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.92156863
       objectReference: {fileID: 0}
     - target: {fileID: 8443019950783619669, guid: 6c85cd51ef441164883009a87773377e,
         type: 3}
