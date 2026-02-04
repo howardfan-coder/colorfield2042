@@ -40,7 +40,7 @@ public class TilemapBase : MonoBehaviour
 
     public virtual void ChangeTileMapState(ColorType type) 
     {
-        if (colorType == type && colorType != ColorType.WHITE)
+        if (colorType == type || colorType == ColorType.WHITE)
         {
             tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1);
             tilemapCollider2D.enabled = true;
