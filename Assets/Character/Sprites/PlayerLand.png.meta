@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 93c828a03eeb34779a4373e83c7e1bcc
+guid: e0d1e122a29a24ec19a2b23782952411
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: Unity_Baddie_Hurt_0
+    second: Unity_MC_render_land_0
   - first:
       213: 21300002
-    second: Unity_Baddie_Hurt_1
+    second: Unity_MC_render_land_1
   - first:
       213: 21300004
-    second: Unity_Baddie_Hurt_2
+    second: Unity_MC_render_land_2
   - first:
       213: 21300006
-    second: Unity_Baddie_Hurt_3
+    second: Unity_MC_render_land_3
   - first:
       213: 21300008
-    second: Unity_Baddie_Hurt_4
-  - first:
-      213: 21300010
-    second: Unity_Baddie_Hurt_5
-  - first:
-      213: 21300012
-    second: Unity_Baddie_Hurt_6
-  - first:
-      213: 21300014
-    second: Unity_Baddie_Hurt_7
-  - first:
-      213: 21300016
-    second: Unity_Baddie_Hurt_8
+    second: Unity_MC_render_land_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -98,7 +86,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -110,7 +98,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -122,7 +110,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -131,11 +119,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_0
+      name: Unity_MC_render_land_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
+        y: 126
         width: 128
         height: 126
       alignment: 0
@@ -145,18 +133,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0882ffebeac5543308c56ce35980ffcd
+      spriteID: 451b7046c44724a11b68941b40f15f0f
       internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_1
+      name: Unity_MC_render_land_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 252
+        y: 126
         width: 128
         height: 126
       alignment: 0
@@ -166,18 +154,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edfd0de2c20da4d5d8c6fce54233ea38
+      spriteID: 3969cfb0e2b674a89ad13e00ad1ea050
       internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_2
+      name: Unity_MC_render_land_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 252
+        y: 126
         width: 128
         height: 126
       alignment: 0
@@ -187,18 +175,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087853fc2b9b1403ca1e8e18e9d118f8
+      spriteID: 011dad868034147db88b92ad496b1e38
       internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_3
+      name: Unity_MC_render_land_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 126
+        y: 0
         width: 128
         height: 126
       alignment: 0
@@ -208,18 +196,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee148877945304c2eb8c36547b630687
+      spriteID: 01bb7847703d845109c81b07fb4ab1ff
       internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_4
+      name: Unity_MC_render_land_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 126
+        y: 0
         width: 128
         height: 126
       alignment: 0
@@ -229,92 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c40aec88d7c4f6990c2f7abe3d3410
+      spriteID: 66aa0e57c9b6340b1b1d7d54f645618c
       internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Hurt_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2679c5b6f9714386a4eaba2b87b6792
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Hurt_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e96f879d2fac04c2e8371793d99e1dde
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Hurt_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7cf9fefefc2d453682288f7b22f6c2a
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Hurt_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76d46598d23f94cc09e72a0aec8f4e13
-      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -322,7 +226,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 362ccb27cf7f241f6b9b5f22cb6bd1e6
+    spriteID: c52ad6d09d98d4d9a881d6b59388b3d2
     internalID: 0
     vertices: []
     indices: 
@@ -330,15 +234,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unity_Baddie_Hurt_6: 21300012
-      Unity_Baddie_Hurt_7: 21300014
-      Unity_Baddie_Hurt_2: 21300004
-      Unity_Baddie_Hurt_3: 21300006
-      Unity_Baddie_Hurt_8: 21300016
-      Unity_Baddie_Hurt_4: 21300008
-      Unity_Baddie_Hurt_1: 21300002
-      Unity_Baddie_Hurt_0: 21300000
-      Unity_Baddie_Hurt_5: 21300010
+      Unity_MC_render_land_0: 21300000
+      Unity_MC_render_land_4: 21300008
+      Unity_MC_render_land_1: 21300002
+      Unity_MC_render_land_3: 21300006
+      Unity_MC_render_land_2: 21300004
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 93c828a03eeb34779a4373e83c7e1bcc
+guid: d7f3ba40c95624407a79329e1af8b953
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: Unity_Baddie_Hurt_0
+    second: Collectable_Collected_0
   - first:
       213: 21300002
-    second: Unity_Baddie_Hurt_1
+    second: Collectable_Collected_1
   - first:
       213: 21300004
-    second: Unity_Baddie_Hurt_2
+    second: Collectable_Collected_2
   - first:
       213: 21300006
-    second: Unity_Baddie_Hurt_3
+    second: Collectable_Collected_3
   - first:
       213: 21300008
-    second: Unity_Baddie_Hurt_4
+    second: Collectable_Collected_4
   - first:
       213: 21300010
-    second: Unity_Baddie_Hurt_5
+    second: Collectable_Collected_5
   - first:
       213: 21300012
-    second: Unity_Baddie_Hurt_6
+    second: Collectable_Collected_6
   - first:
       213: 21300014
-    second: Unity_Baddie_Hurt_7
+    second: Collectable_Collected_7
   - first:
       213: 21300016
-    second: Unity_Baddie_Hurt_8
+    second: Collectable_Collected_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -74,7 +74,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -110,7 +110,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -122,7 +122,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_0
+      name: Collectable_Collected_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0882ffebeac5543308c56ce35980ffcd
+      spriteID: ba126587c8ace49f3b2d7a8163b470ac
       internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_1
+      name: Collectable_Collected_1
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edfd0de2c20da4d5d8c6fce54233ea38
+      spriteID: 15dce7243c5e7414fb1fe9929bfea44c
       internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_2
+      name: Collectable_Collected_2
       rect:
         serializedVersion: 2
         x: 256
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087853fc2b9b1403ca1e8e18e9d118f8
+      spriteID: b556ded9e65fd46b3a2b1b010eaba039
       internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_3
+      name: Collectable_Collected_3
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee148877945304c2eb8c36547b630687
+      spriteID: 892dc7345a25346c59620720aa525811
       internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_4
+      name: Collectable_Collected_4
       rect:
         serializedVersion: 2
         x: 128
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c40aec88d7c4f6990c2f7abe3d3410
+      spriteID: 3b32313a386c74e5f907b6fc66232d7c
       internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_5
+      name: Collectable_Collected_5
       rect:
         serializedVersion: 2
         x: 256
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2679c5b6f9714386a4eaba2b87b6792
+      spriteID: 0eea1aeb3ee424045aeeee627664cb63
       internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_6
+      name: Collectable_Collected_6
       rect:
         serializedVersion: 2
         x: 0
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e96f879d2fac04c2e8371793d99e1dde
+      spriteID: 79810ff5da1d64c48a8148c85fea6822
       internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_7
+      name: Collectable_Collected_7
       rect:
         serializedVersion: 2
         x: 128
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7cf9fefefc2d453682288f7b22f6c2a
+      spriteID: 43d24bf78616c482ea7af52fbdaededc
       internalID: 21300014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Hurt_8
+      name: Collectable_Collected_8
       rect:
         serializedVersion: 2
         x: 256
@@ -313,7 +313,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76d46598d23f94cc09e72a0aec8f4e13
+      spriteID: 320555581fd434124a91e7c5df6a1bc3
       internalID: 21300016
       vertices: []
       indices: 
@@ -322,7 +322,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 362ccb27cf7f241f6b9b5f22cb6bd1e6
+    spriteID: f820f6647e7ae435dab69606619639fd
     internalID: 0
     vertices: []
     indices: 
@@ -330,15 +330,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unity_Baddie_Hurt_6: 21300012
-      Unity_Baddie_Hurt_7: 21300014
-      Unity_Baddie_Hurt_2: 21300004
-      Unity_Baddie_Hurt_3: 21300006
-      Unity_Baddie_Hurt_8: 21300016
-      Unity_Baddie_Hurt_4: 21300008
-      Unity_Baddie_Hurt_1: 21300002
-      Unity_Baddie_Hurt_0: 21300000
-      Unity_Baddie_Hurt_5: 21300010
+      Collectable_Collected_1: 21300002
+      Collectable_Collected_2: 21300004
+      Collectable_Collected_3: 21300006
+      Collectable_Collected_0: 21300000
+      Collectable_Collected_4: 21300008
+      Collectable_Collected_8: 21300016
+      Collectable_Collected_7: 21300014
+      Collectable_Collected_5: 21300010
+      Collectable_Collected_6: 21300012
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

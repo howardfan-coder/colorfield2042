@@ -22,13 +22,6 @@ namespace Core.CelesteLikeMovement
         private Vector2 ridingPlatformPosPrev;
         private Vector2 ridingPlatformDelta;
 
-        private const float AnimMoveThreshold = 0.05f;
-        private const float AnimApexThreshold = 0.05f;
-        private const string AnimIdle = "idle";
-        private const string AnimMove = "move";
-        private const string AnimJump = "jump";
-        private const string AnimFall = "fall";
-
         float varJumpTimer;
         float varJumpSpeed; //
         int moveX;
@@ -265,7 +258,6 @@ namespace Core.CelesteLikeMovement
              // Apply platform displacement after own movement to keep sticking to moving ground.
              ApplyPlatformRide();
              CheckCollectables();
-             UpdateAnimationState();
              UpdateHair(deltaTime);
  
              UpdateCamera(deltaTime);
@@ -556,24 +548,5 @@ namespace Core.CelesteLikeMovement
 
             ridingPlatformDelta = Vector2.zero;
         }
-
-        private void UpdateAnimationState()
-        {
-            string target;
-            if (!OnGround)
-            {
-                target = Speed.y > AnimApexThreshold ? AnimJump : AnimFall;
-            }
-            else if (Mathf.Abs(Speed.x) > AnimMoveThreshold)
-            {
-                target = AnimMove;
-            }
-            else
-            {
-                target = AnimIdle;
-            }
-
-            SpriteControl.PlayClip(target);
-        }
-    }
-}
+     }
+ }

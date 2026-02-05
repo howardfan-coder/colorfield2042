@@ -1,52 +1,55 @@
 fileFormatVersion: 2
-guid: 38c1b0996c8e0457eb88644b8cb126f3
+guid: 75b38086a902846edbae786183b0274d
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: Unity_Baddie_Run_0
+    second: Unity_MC_render_death_0
   - first:
       213: 21300002
-    second: Unity_Baddie_Run_1
+    second: Unity_MC_render_death_1
   - first:
       213: 21300004
-    second: Unity_Baddie_Run_2
+    second: Unity_MC_render_death_2
   - first:
       213: 21300006
-    second: Unity_Baddie_Run_3
+    second: Unity_MC_render_death_3
   - first:
       213: 21300008
-    second: Unity_Baddie_Run_4
+    second: Unity_MC_render_death_4
   - first:
       213: 21300010
-    second: Unity_Baddie_Run_5
+    second: Unity_MC_render_death_5
   - first:
       213: 21300012
-    second: Unity_Baddie_Run_6
+    second: Unity_MC_render_death_6
   - first:
       213: 21300014
-    second: Unity_Baddie_Run_7
+    second: Unity_MC_render_death_7
   - first:
       213: 21300016
-    second: Unity_Baddie_Run_8
+    second: Unity_MC_render_death_8
   - first:
       213: 21300018
-    second: Unity_Baddie_Run_9
+    second: Unity_MC_render_death_9
   - first:
       213: 21300020
-    second: Unity_Baddie_Run_10
+    second: Unity_MC_render_death_10
   - first:
       213: 21300022
-    second: Unity_Baddie_Run_11
+    second: Unity_MC_render_death_11
   - first:
       213: 21300024
-    second: Unity_Baddie_Run_12
+    second: Unity_MC_render_death_12
   - first:
       213: 21300026
-    second: Unity_Baddie_Run_13
+    second: Unity_MC_render_death_13
   - first:
       213: 21300028
-    second: Unity_Baddie_Run_14
+    second: Unity_MC_render_death_14
+  - first:
+      213: 21300030
+    second: Unity_MC_render_death_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +119,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -128,7 +131,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -140,7 +143,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -149,91 +152,196 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unity_Baddie_Run_0
+      name: Unity_MC_render_death_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 252
+        y: 378
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ff3a0690c24411c8b6d9bc6d10555c
+      spriteID: bda2d5f8f623e4a8796652186b0bcc76
       internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_1
+      name: Unity_MC_render_death_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 252
+        y: 378
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c95763c0d0c4414a0d4f816b277634
+      spriteID: 658d4b646a01448c5bcb2de564e6a49e
       internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_2
+      name: Unity_MC_render_death_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 252
+        y: 378
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f24c0b46bfccf4dc9bf2bbe815c9a619
+      spriteID: 1df9e15e4a2ca48e79424d6c84dd9733
       internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_3
+      name: Unity_MC_render_death_3
       rect:
         serializedVersion: 2
         x: 384
-        y: 252
+        y: 378
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d794fe703aa947608a6dcd26618282d
+      spriteID: 036f5e5a6203d471e9de01d741b3e0ca
       internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_4
+      name: Unity_MC_render_death_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 378
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9aa33764a27040f68a05d77d94f25c9
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091a0b7284bdc4a639610f2a3cd2e811
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 252
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2a7ee0c8cfc4b858e87293e0ddba8e
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 252
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ba64c4f4b1742b0aa1a91b8733df1c
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 252
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cd0ac7a026b4d71acb37f5ef590b43
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_9
       rect:
         serializedVersion: 2
         x: 512
@@ -241,125 +349,125 @@ TextureImporter:
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc761fb06ba3540a2895cac10e29abf9
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccc52c4d399ff49b9b7f28072f04e174
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_6
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16ce00113ab6b4a7a9cf672496d9163a
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_7
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbb114a0645ab4c688f2eb4b57fb347a
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_8
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f08586a793c6427abf6546f1d95fec7
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_9
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 126
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 511a615d3d4244a8f9228e8ea288c083
+      spriteID: ea39c381d4a014179af4fcad39c5dae7
       internalID: 21300018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_10
+      name: Unity_MC_render_death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba704574a285145fab4cafefd960d205
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 126
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73c72c9bc1c1459b907b4d111c86268
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 126
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b28a96e553d44d194415b87e966d36
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 126
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2315faca0d4d4bb69b5e42e707a76f0
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 126
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca1c5c5f2ca34630ad0a1bd51f75afb
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unity_MC_render_death_15
       rect:
         serializedVersion: 2
         x: 0
@@ -367,98 +475,14 @@ TextureImporter:
         width: 128
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fa33478c2f514b459d5f59401d1dcd3
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_11
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8821d2c53f55a444686446dfc8436329
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_12
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 310309d6e32fb4f729f47b07ce365b06
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_13
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ff22b1d0e7ba48d89b34c29b9611e5f
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unity_Baddie_Run_14
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd57ec4fd1df94dbbb7533d6123e2e64
-      internalID: 21300028
+      spriteID: ae25d87d072474fa6ab5310d8fb81c68
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -466,7 +490,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c3a5042cf1e4d4886bd7d5a9a964e9a8
+    spriteID: f486e4e09763c4890aaacb5dd053b7a8
     internalID: 0
     vertices: []
     indices: 
@@ -474,21 +498,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unity_Baddie_Run_14: 21300028
-      Unity_Baddie_Run_11: 21300022
-      Unity_Baddie_Run_12: 21300024
-      Unity_Baddie_Run_1: 21300002
-      Unity_Baddie_Run_2: 21300004
-      Unity_Baddie_Run_13: 21300026
-      Unity_Baddie_Run_4: 21300008
-      Unity_Baddie_Run_10: 21300020
-      Unity_Baddie_Run_0: 21300000
-      Unity_Baddie_Run_3: 21300006
-      Unity_Baddie_Run_5: 21300010
-      Unity_Baddie_Run_6: 21300012
-      Unity_Baddie_Run_7: 21300014
-      Unity_Baddie_Run_8: 21300016
-      Unity_Baddie_Run_9: 21300018
+      Unity_MC_render_death_3: 21300006
+      Unity_MC_render_death_4: 21300008
+      Unity_MC_render_death_5: 21300010
+      Unity_MC_render_death_0: 21300000
+      Unity_MC_render_death_12: 21300024
+      Unity_MC_render_death_9: 21300018
+      Unity_MC_render_death_11: 21300022
+      Unity_MC_render_death_7: 21300014
+      Unity_MC_render_death_13: 21300026
+      Unity_MC_render_death_14: 21300028
+      Unity_MC_render_death_6: 21300012
+      Unity_MC_render_death_15: 21300030
+      Unity_MC_render_death_8: 21300016
+      Unity_MC_render_death_2: 21300004
+      Unity_MC_render_death_1: 21300002
+      Unity_MC_render_death_10: 21300020
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
