@@ -64,8 +64,9 @@ namespace Core.CelesteLikeMovement
             Color color = Color.white;
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
-                SpriteControl.WallSlide(color, dir);
+                //TODO for effect
+                // color = hit.collider.GetComponent<Ground>().GroundColor;
+                // SpriteControl.WallSlide(color, dir);
             }
         }
         //播放Dash特效
@@ -85,7 +86,7 @@ namespace Core.CelesteLikeMovement
             RaycastHit2D hit = Physics2D.BoxCast(position, collider.size*0.8f, 0, -forward, 0.5f, GroundMask);
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
+                // color = hit.collider.GetComponent<Ground>().GroundColor;
                 //TODO
                 // EffectControl.JumpDust(position, color, forward);
             }
@@ -120,9 +121,9 @@ namespace Core.CelesteLikeMovement
             Color color = Color.white;
             if (hit && hit.collider)
             {
-                color = hit.collider.GetComponent<Ground>().GroundColor;
-                
+
                 //TODO: LandDust特效待实现
+                // color = hit.collider.GetComponent<Ground>().GroundColor;
                 // EffectControl.LandDust(position, color);
             }
         }

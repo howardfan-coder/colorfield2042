@@ -43,16 +43,17 @@ namespace Core.CelesteLikeMovement
         public void Reload()
         {
             clipMap.Clear();
+            SpriteAnimationClip firstValid = null;
             foreach (var clip in clips)
             {
                 if (clip == null || string.IsNullOrEmpty(clip.name) || clip.frames == null || clip.frames.Length == 0)
                     continue;
                 clipMap[clip.name] = clip;
+                firstValid ??= clip;
             }
-            if (clipMap.Count > 0)
+            if (firstValid != null)
             {
-                var first = clips[0];
-                PlayClip(first.name, true);
+                PlayClip(firstValid.name, true);
             }
         }
 
@@ -68,7 +69,20 @@ namespace Core.CelesteLikeMovement
 
         public void SetSpriteIndex(int index)
         {
-            //TODO Change sprite based on index
+            SpriteAnimationClip clip = activeClip;
+            if (clip == null || clip.frames == null || clip.frames.Length == 0)
+            {
+                clip = clips != null && clips.Length > 0 ? clips[0] : null;
+            }
+            if (clip == null || clip.frames == null || clip.frames.Length == 0)
+                return;
+
+            int clamped = Mathf.Clamp(index, 0, clip.frames.Length - 1);
+            currentFrame = clamped;
+            frameTimer = 0f;
+            spriteRenderer.sprite = clip.frames[clamped];
+            activeClip = clip;
+            currentClip = clip.name;
         }
 
 
@@ -125,8 +139,7 @@ namespace Core.CelesteLikeMovement
                 new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(Color.black, 1.0f) },
                 new GradientAlphaKey[] { new GradientAlphaKey(1, 0.0f), new GradientAlphaKey(1, 0.6f), new GradientAlphaKey(0, 1.0f) }
             );
-            
-            //TODO
+
             // this.hair.colorGradient = gradient;
             // this.hairSprite01.color = color;
             // this.hairSprite02.color = color;
