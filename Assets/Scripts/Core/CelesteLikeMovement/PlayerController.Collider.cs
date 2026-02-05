@@ -147,16 +147,42 @@ namespace Core.CelesteLikeMovement
         {
             return CheckGround(Vector2.zero);
         }
-        //针对横向,进行碰撞检测.如果发生碰撞,
+        //针对横向,进行碰撞检测.如果发生碰撞，且法线向上
         private bool CheckGround(Vector2 offset)
         {
             Vector2 origion = this.Position + collider.position + offset;
             RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION + config.platformProbe, GroundMask);
             if (hit && hit.normal == Vector2.up)
             {
+                // 获取平台颜色
+                UpdateGroundColor(hit.collider);
                 return true;
             }
             return false; 
+        }
+
+        // 新增方法：更新地面颜色
+        private void UpdateGroundColor(Collider2D collider)
+        {
+            if (collider == null) return;
+            
+            // 尝试获取 TilemapRenderer (TilemapBase)
+            var tilemap = collider.GetComponent<Tilemap>();
+            if (tilemap != null)
+            {
+                this.GroundColor = tilemap.color;
+                return;
+            }
+
+            // 尝试获取 SpriteRenderer
+            var spriteRenderer = collider.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                this.GroundColor = spriteRenderer.color;
+                return;
+            }
+            
+            this.GroundColor = Color.white;
         }
 
         //根据整个关卡的边缘框进行检测,确保人物在关卡的框内.

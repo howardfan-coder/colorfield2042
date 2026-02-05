@@ -135,7 +135,7 @@ namespace Core.CelesteLikeMovement
                 wasOnGround = onGround;
                 if (Speed.y <= 0)
                 {
-                    this.onGround = CheckGround();//碰撞检测地面
+                    this.onGround = CheckGround(); // CheckGround 现在会更新 GroundColor
                 }
                 else
                 {
@@ -411,7 +411,8 @@ namespace Core.CelesteLikeMovement
 
         public bool OnGround => this.onGround;
         private Color groundColor = Color.white;
-        public Color GroundColor => this.groundColor;
+        public Color GroundColor { get; private set; } = Color.white;
+
         public Vector2 Position { get; private set; }
         //表示进入爬墙状态有0.1秒时间,不发生移动，为了让玩家看清发生了爬墙的动作
         public float ClimbNoMoveTimer { get; set; }

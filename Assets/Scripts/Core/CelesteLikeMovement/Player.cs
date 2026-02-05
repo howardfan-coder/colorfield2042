@@ -73,15 +73,29 @@ namespace Core.CelesteLikeMovement
             playerRenderer.transform.localScale = scale;
             playerRenderer.transform.position = playerController.Position;
 
-            //if (!lastFrameOnGround && this.playerController.OnGround)
-            //{
-            //    this.playerRenderer.PlayMoveEffect(true, this.playerController.GroundColor);
-            //}
-            //else if (lastFrameOnGround && !this.playerController.OnGround)
-            //{
-            //    this.playerRenderer.PlayMoveEffect(false, this.playerController.GroundColor);
-            //}
-            //this.playerRenderer.UpdateMoveEffect();
+            // ===== 修复后的粒子逻辑 =====
+
+            // 1. 落地瞬间
+            if (!lastFrameOnGround && this.playerController.OnGround)
+            {
+                this.playerRenderer.PlayMoveEffect(true, this.playerController.GroundColor);
+            }
+            // 2. 起跳瞬间 (离开地面)
+            else if (lastFrameOnGround && !this.playerController.OnGround)
+            {
+                this.playerRenderer.PlayMoveEffect(false, this.playerController.GroundColor);
+            }
+            
+            // 3. 持续移动 (必须满足：在地面 + 有X轴速度)
+            if (playerController.OnGround && Mathf.Abs(playerController.Speed.x) > 0.1f)
+            {
+                this.playerRenderer.UpdateMoveEffect(this.playerController.GroundColor);
+            }
+            else
+            {
+                // 静止或在空中时，停止播放移动粒子
+                this.playerRenderer.UpdateMoveEffect(Color.clear);
+            }
 
             this.lastFrameOnGround = this.playerController.OnGround;
         }

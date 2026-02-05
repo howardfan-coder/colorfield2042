@@ -27,6 +27,10 @@ namespace Core.CelesteLikeMovement
         [SerializeField]
         public SpriteRenderer hairSprite02;
 
+        [Header("Effects")]
+        [SerializeField]
+        public ParticleSystem vfxRunDust; // 跑步/落地/起跳共用的尘土粒子
+
         private Vector2 scale;
         private Vector2 currSpriteScale;
 
@@ -160,6 +164,44 @@ namespace Core.CelesteLikeMovement
             frameDirection = 1;
             frameTimer = 0f;
             spriteRenderer.sprite = activeClip.frames[0];
+        }
+
+        // 新增/修改：播放一次性的移动效果（落地/起跳）
+        // isLand: true=落地, false=起跳
+        public void PlayMoveEffect(bool isLand, Color color)
+        {
+            if (vfxRunDust == null) return;
+
+            // 设置颜色
+            var main = vfxRunDust.main;
+            main.startColor = color;
+
+            // 根据是落地还是起跳，可以调整发射数量或速度，这里简单发射
+            int count = isLand ? 5 : 3;
+            vfxRunDust.Emit(count);
+        }
+
+        // 新增/修改：持续更新移动效果（跑步时）
+        // 如果 color 是 clear，则表示不播放
+        public void UpdateMoveEffect(Color color)
+        {
+            if (vfxRunDust == null) return;
+
+            if (color.a <= 0.01f) // Color.clear
+            {
+                // 如果不想持续发射，什么都不做，或者 Stop() 如果是 Loop 的
+                // 这里假设我们用 Emit 方式手动控制，所以不需要 Stop
+                return;
+            }
+
+            // 简单的计时器控制发射频率，避免每帧发射太多
+            // 或者直接利用 ParticleSystem 的 Emission 模块，这里演示手动 Emit
+            if (Random.value < 0.2f) // 简单模拟频率
+            {
+                var main = vfxRunDust.main;
+                main.startColor = color;
+                vfxRunDust.Emit(1);
+            }
         }
 
         private void UpdateAnimation(float deltaTime)
