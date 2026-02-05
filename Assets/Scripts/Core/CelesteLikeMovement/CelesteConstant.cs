@@ -14,14 +14,14 @@ namespace Core.CelesteLikeMovement
         public static bool EnableJumpGrace = true;
         public static bool EnableWallBoost = true;
 
-        public static float Gravity = 90f; //重力
+        public static float Gravity = 55f; //重力
 
         public static float HalfGravThreshold = 4f; //滞空时间阈值
         public static float MaxFall = -16; //普通最大下落速度
         public static float FastMaxFall = -24f;  //快速最大下落速度
         public static float FastMaxAccel = 30f; //快速下落加速度
         //最大移动速度
-        public static float MaxRun = 9f;
+        public static float MaxRun = 7f;
         //Hold情况下的最大移动速度
         public static float HoldingMaxRun = 7f;
         //空气阻力
@@ -31,7 +31,7 @@ namespace Core.CelesteLikeMovement
         //移动减速度
         public static float RunReduce = 40f;
         //
-        public static float JumpSpeed = 10.5f;  //最大跳跃速度
+        public static float JumpSpeed = 8.5f;  //最大跳跃速度
         public static float VarJumpTime = 0.2f; //跳跃持续时间(跳起时,会持续响应跳跃按键[VarJumpTime]秒,影响跳跃的最高高度);
         public static float JumpHBoost = 4f; //退离墙壁的力
         public static float JumpGraceTime = 0.1f;//土狼时间

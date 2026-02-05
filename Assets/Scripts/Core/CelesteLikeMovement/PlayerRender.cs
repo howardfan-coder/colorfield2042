@@ -125,16 +125,16 @@ namespace Core.CelesteLikeMovement
 
         public void DashFlux(Vector2 dir, bool play)
         {
-            if (play)
-            {
-                this.vfxDashFlux.transform.rotation = Quaternion.FromToRotation(Vector2.up, dir);
-                this.vfxDashFlux.Play();
-            }
-            else
-            {
-                this.vfxDashFlux.transform.parent = this.transform;
-                this.vfxDashFlux.Stop();
-            }
+            // if (play)
+            // {
+            //     this.vfxDashFlux.transform.rotation = Quaternion.FromToRotation(Vector2.up, dir);
+            //     this.vfxDashFlux.Play();
+            // }
+            // else
+            // {
+            //     this.vfxDashFlux.transform.parent = this.transform;
+            //     this.vfxDashFlux.Stop();
+            // }
         }
 
         public void SetHairColor(Color color)
