@@ -136,7 +136,45 @@ MonoBehaviour:
   hair: {fileID: 0}
   hairSprite01: {fileID: 0}
   hairSprite02: {fileID: 0}
-  clips: []
+  clips:
+  - name: idle
+    frames:
+    - {fileID: -190495766, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 738974801, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 151821487, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 1484849327, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 908960582, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 832784277, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: -1681378906, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 308257298, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: -2035786156, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: -2097714337, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: -1783929356, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 778580487, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    - {fileID: 156437380, guid: aa5d581d6ba245a4f86589ba094bca93, type: 3}
+    fps: 12
+    loop: 1
+    pingPong: 1
+  - name: move
+    frames:
+    - {fileID: 1473130458, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: 1708198446, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1790056424, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -981832002, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1681787099, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1609335164, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -811710739, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: 898103558, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1485500628, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: 1666421054, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1124821187, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -446911831, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -743925747, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1049555052, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    - {fileID: -1966287751, guid: 38c1b0996c8e0457eb88644b8cb126f3, type: 3}
+    fps: 12
+    loop: 1
+    pingPong: 1
 --- !u!114 &-6945947328095334004
 MonoBehaviour:
   m_ObjectHideFlags: 0

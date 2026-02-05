@@ -48,7 +48,7 @@ TextureImporter:
       213: 21300028
     second: Unity_Baddie_Run_14
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -65,11 +65,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -108,6 +109,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -119,6 +122,7 @@ TextureImporter:
     crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -131,6 +135,7 @@ TextureImporter:
     crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -143,322 +148,323 @@ TextureImporter:
     crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unity_Baddie_Run_0
+      name: EnemyRun_0
       rect:
         serializedVersion: 2
         x: 0
         y: 252
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ff3a0690c24411c8b6d9bc6d10555c
-      internalID: 21300000
+      spriteID: fa4bf170a2493e14c8fd5adaf3a92815
+      internalID: 1473130458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_1
+      name: EnemyRun_1
       rect:
         serializedVersion: 2
         x: 128
         y: 252
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c95763c0d0c4414a0d4f816b277634
-      internalID: 21300002
+      spriteID: 25a783602b0a5c8458dae6d67b575b1d
+      internalID: 1708198446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_2
+      name: EnemyRun_2
       rect:
         serializedVersion: 2
         x: 256
         y: 252
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f24c0b46bfccf4dc9bf2bbe815c9a619
-      internalID: 21300004
+      spriteID: d82a8c61a4764ed4cac9f44b730520ea
+      internalID: -1790056424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_3
+      name: EnemyRun_3
       rect:
         serializedVersion: 2
         x: 384
         y: 252
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d794fe703aa947608a6dcd26618282d
-      internalID: 21300006
+      spriteID: 9455f7f2b58c8cb4ca216486c4193d63
+      internalID: -981832002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_4
+      name: EnemyRun_4
       rect:
         serializedVersion: 2
         x: 512
         y: 252
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc761fb06ba3540a2895cac10e29abf9
-      internalID: 21300008
+      spriteID: f90d485519f39294386b76bc06448f3d
+      internalID: -1681787099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_5
+      name: EnemyRun_5
       rect:
         serializedVersion: 2
         x: 0
         y: 126
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc52c4d399ff49b9b7f28072f04e174
-      internalID: 21300010
+      spriteID: 6e4ca50c630416948901af404263237e
+      internalID: -1609335164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_6
+      name: EnemyRun_6
       rect:
         serializedVersion: 2
         x: 128
         y: 126
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16ce00113ab6b4a7a9cf672496d9163a
-      internalID: 21300012
+      spriteID: cf83103e41f8b7845ac794d34dd70add
+      internalID: -811710739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_7
+      name: EnemyRun_7
       rect:
         serializedVersion: 2
         x: 256
         y: 126
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbb114a0645ab4c688f2eb4b57fb347a
-      internalID: 21300014
+      spriteID: 821510a2a6f1ecb478318e10fd08fcb3
+      internalID: 898103558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_8
+      name: EnemyRun_8
       rect:
         serializedVersion: 2
         x: 384
         y: 126
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f08586a793c6427abf6546f1d95fec7
-      internalID: 21300016
+      spriteID: 205f94db728c4ec45814b14a045d1c2a
+      internalID: -1485500628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_9
+      name: EnemyRun_9
       rect:
         serializedVersion: 2
         x: 512
         y: 126
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511a615d3d4244a8f9228e8ea288c083
-      internalID: 21300018
+      spriteID: 3761e4e6cd17df244ad5ad0f1965ec6a
+      internalID: 1666421054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_10
+      name: EnemyRun_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fa33478c2f514b459d5f59401d1dcd3
-      internalID: 21300020
+      spriteID: 63552fbc39a7ed64ea4096d668572d94
+      internalID: -1124821187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_11
+      name: EnemyRun_11
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8821d2c53f55a444686446dfc8436329
-      internalID: 21300022
+      spriteID: bc13b585a2959da4e8ae0d20acc266a3
+      internalID: -446911831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_12
+      name: EnemyRun_12
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310309d6e32fb4f729f47b07ce365b06
-      internalID: 21300024
+      spriteID: 378cf0ae8d1e15b439d53354d11954fb
+      internalID: -743925747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_13
+      name: EnemyRun_13
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ff22b1d0e7ba48d89b34c29b9611e5f
-      internalID: 21300026
+      spriteID: 6d22176b9973aa84195c55806906bc7f
+      internalID: -1049555052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unity_Baddie_Run_14
+      name: EnemyRun_14
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 128
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.217}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd57ec4fd1df94dbbb7533d6123e2e64
-      internalID: 21300028
+      spriteID: 645df8c232c0a294e929002b218fda7a
+      internalID: -1966287751
       vertices: []
       indices: 
       edges: []
@@ -474,24 +480,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unity_Baddie_Run_14: 21300028
-      Unity_Baddie_Run_11: 21300022
-      Unity_Baddie_Run_12: 21300024
-      Unity_Baddie_Run_1: 21300002
-      Unity_Baddie_Run_2: 21300004
-      Unity_Baddie_Run_13: 21300026
-      Unity_Baddie_Run_4: 21300008
-      Unity_Baddie_Run_10: 21300020
-      Unity_Baddie_Run_0: 21300000
-      Unity_Baddie_Run_3: 21300006
-      Unity_Baddie_Run_5: 21300010
-      Unity_Baddie_Run_6: 21300012
-      Unity_Baddie_Run_7: 21300014
-      Unity_Baddie_Run_8: 21300016
-      Unity_Baddie_Run_9: 21300018
-  spritePackingTag: 
+      EnemyRun_0: 1473130458
+      EnemyRun_1: 1708198446
+      EnemyRun_10: -1124821187
+      EnemyRun_11: -446911831
+      EnemyRun_12: -743925747
+      EnemyRun_13: -1049555052
+      EnemyRun_14: -1966287751
+      EnemyRun_2: -1790056424
+      EnemyRun_3: -981832002
+      EnemyRun_4: -1681787099
+      EnemyRun_5: -1609335164
+      EnemyRun_6: -811710739
+      EnemyRun_7: 898103558
+      EnemyRun_8: -1485500628
+      EnemyRun_9: 1666421054
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

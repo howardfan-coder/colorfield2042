@@ -37,6 +37,7 @@ namespace Core.CelesteLikeMovement
         private readonly Dictionary<string, SpriteAnimationClip> clipMap = new();
         private string currentClip;
         private int currentFrame;
+        private int frameDirection = 1;
         private float frameTimer;
         private SpriteAnimationClip activeClip;
 
@@ -156,6 +157,7 @@ namespace Core.CelesteLikeMovement
             currentClip = name;
             activeClip = clip;
             currentFrame = 0;
+            frameDirection = 1;
             frameTimer = 0f;
             spriteRenderer.sprite = activeClip.frames[0];
         }
@@ -170,17 +172,36 @@ namespace Core.CelesteLikeMovement
             while (frameTimer >= frameDuration)
             {
                 frameTimer -= frameDuration;
-                currentFrame++;
-                if (currentFrame >= activeClip.frames.Length)
+
+                if (activeClip.pingPong)
                 {
-                    if (activeClip.loop)
-                        currentFrame = 0;
-                    else
+                    currentFrame += frameDirection;
+                    if (currentFrame >= activeClip.frames.Length)
                     {
                         currentFrame = activeClip.frames.Length - 1;
-                        frameTimer = 0f;
+                        frameDirection = -1;
+                    }
+                    else if (currentFrame < 0)
+                    {
+                        currentFrame = 0;
+                        frameDirection = 1;
                     }
                 }
+                else
+                {
+                    currentFrame++;
+                    if (currentFrame >= activeClip.frames.Length)
+                    {
+                        if (activeClip.loop)
+                            currentFrame = 0;
+                        else
+                        {
+                            currentFrame = activeClip.frames.Length - 1;
+                            frameTimer = 0f;
+                        }
+                    }
+                }
+
                 spriteRenderer.sprite = activeClip.frames[currentFrame];
             }
         }
@@ -193,5 +214,6 @@ namespace Core.CelesteLikeMovement
         public Sprite[] frames;
         public float fps = 8f;
         public bool loop = true;
+        public bool pingPong = false;
     }
  }
