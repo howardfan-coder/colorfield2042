@@ -54,6 +54,11 @@ namespace Core.CelesteLikeMovement
         public void Update()
         {
             float deltaTime = Time.unscaledDeltaTime;
+            // 【新增】ESC 退出游戏逻辑
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitGame();
+            }
             if (UpdateTime(deltaTime))
             {
                 if (this.gameState == EGameState.Play)
@@ -121,5 +126,15 @@ namespace Core.CelesteLikeMovement
             ctrl?.DrawAllColliders();
         }
 #endif
+
+        // 【新增】退出方法
+        public void QuitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
     }
 }
