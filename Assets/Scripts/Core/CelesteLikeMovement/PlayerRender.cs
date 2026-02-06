@@ -44,6 +44,7 @@ namespace Core.CelesteLikeMovement
         private int frameDirection = 1;
         private float frameTimer;
         private SpriteAnimationClip activeClip;
+        private System.Action clipCompleteOnce;
 
         public void Reload()
         {
@@ -150,16 +151,21 @@ namespace Core.CelesteLikeMovement
             // this.hairSprite02.color = color;
         }
 
-        public void PlayClip(string name, bool restart = false)
+        public void PlayClip(string name, bool restart = false, System.Action onComplete = null, bool forceReset = false)
         {
             if (!clipMap.TryGetValue(name, out var clip))
                 return;
 
-            if (!restart && currentClip == name && activeClip != null)
+            if (!restart && currentClip == name && activeClip != null && !forceReset)
+            {
+                if (onComplete != null && !(activeClip.loop || activeClip.pingPong))
+                    clipCompleteOnce = onComplete;
                 return;
-
+            }
+            
             currentClip = name;
             activeClip = clip;
+            clipCompleteOnce = (activeClip.loop || activeClip.pingPong) ? null : onComplete;
             currentFrame = 0;
             frameDirection = 1;
             frameTimer = 0f;
@@ -235,17 +241,29 @@ namespace Core.CelesteLikeMovement
                     if (currentFrame >= activeClip.frames.Length)
                     {
                         if (activeClip.loop)
+                        {
                             currentFrame = 0;
+                        }
                         else
                         {
                             currentFrame = activeClip.frames.Length - 1;
                             frameTimer = 0f;
+                            spriteRenderer.sprite = activeClip.frames[currentFrame];
+                            InvokeClipCompleteOnce();
+                            return;
                         }
                     }
                 }
 
                 spriteRenderer.sprite = activeClip.frames[currentFrame];
             }
+        }
+
+        private void InvokeClipCompleteOnce()
+        {
+            var callback = clipCompleteOnce;
+            clipCompleteOnce = null;
+            callback?.Invoke();
         }
     }
 

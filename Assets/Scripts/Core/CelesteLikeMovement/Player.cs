@@ -20,6 +20,7 @@ namespace Core.CelesteLikeMovement
         private Vector2 startPosition;
 
         private PlayerConfig config; // Player类需要缓存一下config以便重生使用
+        private bool deathPending;
 
         public Player(IGameContext gameContext)
         {
@@ -54,14 +55,29 @@ namespace Core.CelesteLikeMovement
 
         public void Update(float deltaTime)
         {
-            if (playerController.CheckDeadGround())
+            if (deathPending)
             {
-                EventCenter.Instance.EventTriger(EventType.PlayerDeath, null);
-                playerController.Init(this.bounds, this.startPosition, this.config);
+                Render();
+                return;
             }
 
             playerController.Update(deltaTime);
+            if (playerController.CheckDeadGround())
+            {
+                deathPending = true;
+                EventCenter.Instance.EventTriger(EventType.PlayerDeath, null);
+                playerController.SpriteControl.PlayClip("dead", true, OnDeathAnimComplete, true);
+                Render();
+                return;
+            }
+
             Render();
+        }
+
+        private void OnDeathAnimComplete()
+        {
+            deathPending = false;
+            playerController.Init(this.bounds, this.startPosition, this.config);
         }
 
         private void Render()

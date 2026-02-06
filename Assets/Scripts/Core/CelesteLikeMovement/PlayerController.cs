@@ -28,6 +28,7 @@ namespace Core.CelesteLikeMovement
         private const string AnimMove = "move";
         private const string AnimJump = "jump";
         private const string AnimFall = "fall";
+        private const string AnimDead = "dead";
 
         float varJumpTimer;
         float varJumpSpeed; //

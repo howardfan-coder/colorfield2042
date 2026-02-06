@@ -29,7 +29,7 @@ namespace Core.CelesteLikeMovement
         void SetHairColor(Color color);
 
         void WallSlide(Color color, Vector2 dir);
-
-        void PlayClip(string name, bool restart = false);
+ 
+        void PlayClip(string name, bool restart = false, System.Action onComplete = null,bool forceReset = false);
     }
 }

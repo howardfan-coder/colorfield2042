@@ -5019,6 +5019,19 @@ MonoBehaviour:
     fps: 12
     loop: 1
     pingPong: 1
+  - name: dead
+    frames:
+    - {fileID: -1154518007, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: 2021130436, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: 881305120, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: -613050461, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: 277358760, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: -913901254, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: 107222199, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    - {fileID: 1902074348, guid: 0d22f52a800554566bb7a5bd62041458, type: 3}
+    fps: 24
+    loop: 0
+    pingPong: 0
 --- !u!114 &-6945947328095334004
 MonoBehaviour:
   m_ObjectHideFlags: 0
